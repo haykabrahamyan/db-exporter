@@ -1,0 +1,12 @@
+{
+    "name": "haykabrahamyan/db-exporter",
+    "description": "The Simple package to export MySql database as .sql file via shell.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "haykabrahamyan",
+            "email": "devabrahamyan@gmail.com"
+        }
+    ],
+    "require": {}
+}
