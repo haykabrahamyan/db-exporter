@@ -2,7 +2,8 @@
     "name": "haykabrahamyan/db-exporter",
     "description": "The Simple package to export MySql database as .sql file via shell.",
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=5.3.0",
+		"nao-pon/flysystem-google-drive": "~1.1"
     },
     "license": "MIT",
     "authors": [
@@ -16,5 +17,5 @@
 		  "Haykabrahamyan\\DbExporter\\": "src/"
 		}
 	  },
-    "minimum-stability": "beta"
+    "minimum-stability": "stable"
 }

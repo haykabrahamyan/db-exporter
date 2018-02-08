@@ -11,5 +11,13 @@ class DbExporterController extends Controller
         $output = NULL;
         $command = env('DbExporter_MYSQLDUMP') . " -u ".env('DB_USERNAME')." -h ".env('DB_HOST')." -p'".env('DB_PASSWORD')."' ".env('DB_DATABASE')." > ".env('DbExporter_PATH').env('DB_DATABASE').".sql";
         exec($command, $output, $return_var);
+        if (!$return_var){
+            self::uploadDrive();
+        }
      }
+
+    public static function uploadDrive(){
+        $a  = file_get_contents('./'.env('DB_DATABASE').".sql");
+        Storage::disk('google')->put(env('DB_DATABASE').".sql", $a);
+    }
 }
