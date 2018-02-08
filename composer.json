@@ -7,9 +7,14 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "haykabrahamyan",
+            "name": "Hayk Abrahamyan",
             "email": "devabrahamyan@gmail.com"
         }
     ],
-    "minimum-stability": "dev"
+	"autoload": {
+		"psr-0": {
+		  "Haykabrahamyan\\DbExporter\\": "src/"
+		}
+	  },
+    "minimum-stability": "beta"
 }
