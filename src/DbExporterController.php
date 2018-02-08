@@ -17,7 +17,7 @@ class DbExporterController extends Controller
      }
 
     public static function uploadDrive(){
-        $a  = file_get_contents('./'.env('DB_DATABASE').".sql");
+        $a  = file_get_contents(env('DbExporter_PATH').env('DB_DATABASE').".sql");
         Storage::disk('google')->put(env('DB_DATABASE').".sql", $a);
     }
 }
